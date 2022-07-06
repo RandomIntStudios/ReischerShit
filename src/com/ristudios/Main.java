@@ -10,40 +10,39 @@ import java.util.List;
 public class Main {
 
     public static void main(String[] args) {
-        /*
-        Rectangle rect1 = new Rectangle(3, 4);
-        Rectangle rect2 = new Rectangle(2);
-        Rectangle rect3 = rect1.reverse();
-        System.out.println(rect1.area());
-        System.out.println(rect1.diagonal());
-
-         */
-        TreeNode n1 = new TreeNode(0, null, null);
-        TreeNode n2 = new TreeNode(-2, null, null);
-        TreeNode n3 = new TreeNode(-3, n1, n2);
-        TreeNode n5 = new TreeNode(5, null, null);
-        TreeNode n4 = new TreeNode(3, n3, n5);
-        System.out.println(n4.count());
+        System.out.println("Reischer weg");
     }
 
-    //ADP WS2122
+    //region ADP WS2122 Altklausur
+
+    //Teilaufgaben liegen in den packages objectoriented und tree
+
     //2.1
     public static int[] add(int[] a, int[] b){
         int[] c = new int[a.length+b.length];
-        /**for (int i = 0; i < a.length; i++){
-            c[i] = a[i];
-        }
-        for (int i = 0; i < b.length; i++){
-            c[i+a.length] = b[i];
-        }
-         */
+
+        //double for approach
+
+        //CODE
+        // for (int i = 0; i < a.length; i++){
+        //      c[i] = a[i];
+        //  }
+        //  for (int i = 0; i < b.length; i++){
+        //      c[i+a.length] = b[i];
+        //  }
+
+        //for plus if-else approach
 
         for (int i = 0; i < c.length; i++){
-            /*if (i < a.length){
-                c[i] = a[i];
-            } else{
-                c[i] = b[i - a.length];
-            }*/
+
+            //CODE
+            // if (i < a.length){
+            //      c[i] = a[i];
+            //  } else{
+            //      c[i] = b[i - a.length];
+            //  }
+
+            //for plus ?-operator approach
 
             int z = (i < a.length) ? (c[i] = a[i]) : (c[i] = b[i - a.length]);
 
@@ -62,12 +61,7 @@ public class Main {
         return ints1;
     }
 
-    //4.1
-    /*
-    N       0   1   2   3   4   5   6   7
-
-    F(N)    0
-    */
+   //4.1
 
     public static int f1(int n){
         if (n == 0){
@@ -81,7 +75,11 @@ public class Main {
         return (n-1) + f1(0);
     }
 
-    //4.2
+
+    //endregion
+
+
+    //region Übungsaufgaben von blatt https://elearning.uni-regensburg.de/mod/resource/view.php?id=2145558
 
     public static boolean isDualNumber(String s) {
         for (Character c : s.toCharArray()) {
@@ -188,4 +186,6 @@ public class Main {
         }
         return false;
     }
+
+    //endregion
 }
