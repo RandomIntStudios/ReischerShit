@@ -13,7 +13,7 @@ public class Main {
         System.out.println("Reischer weg");
     }
 
-    //region ADP WS2122 Altklausur
+    //region ADP WS2122 Altklausur https://elearning.uni-regensburg.de/pluginfile.php/2332747/mod_folder/content/0/ADP-WS2122.pdf?forcedownload=1
 
     //Teilaufgaben liegen in den packages objectoriented und tree
 
