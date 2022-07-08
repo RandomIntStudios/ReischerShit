@@ -1,6 +1,7 @@
 package com.ristudios;
 
 
+import com.ristudios.objectoriented.Interval;
 import com.ristudios.objectoriented.Rectangle;
 import com.ristudios.tree.TreeNode;
 
@@ -73,6 +74,56 @@ public class Main {
     }
     public static int f2(int n){
         return (n-1) + f1(0);
+    }
+
+
+    //endregion
+
+
+    //region SS21 Altklausur https://elearning.uni-regensburg.de/pluginfile.php/2332747/mod_folder/content/0/ADP-SS21.pdf?forcedownload=1
+
+    //THEORY
+    // 1.1 Funktionsorientiert, Anwendungsorientiert, Logik orientiert
+    // 1.2 serieller ablauf, explizite angabe der aktionen, eigenständige Lösung
+    // 1.3 Ein Objekt ist eine Instanz einer Klasse, welche wiederum als "Bauplan" für Objekte dient.
+    // 1.4 equals(Object anotherObject) und toString()
+
+    //2.1
+    public static String multi(String s, int n) {
+        StringBuilder builder = new StringBuilder();
+        for (char c : s.toCharArray()){
+            builder.append(String.valueOf(c).repeat(Math.max(0, n)));
+        }
+        return builder.toString();
+    }
+
+    //2.2
+    public static char[] zip(char[] a, char[] b){
+        int count = Math.min(a.length, b.length);
+        String result = "";
+        for (int i = 0; i < count; i++){
+            result = result + a[i] + b[i];
+        }
+        return result.toCharArray();
+    }
+
+    //3.1 siehe com.ristudios.objectoriented.Interval
+
+    //THEORY
+    // 4.1 Immer 0, da die Funktion selbst so lange rekursiv aufgerufen wird, bis N == 0 true ist
+    // 4.2 Lineare Rekursion, da die Methode genau einmal von sich selbst aufgerufen wird.
+    //     Finalrekursion, da die Rekursion das letzte statement ist.
+    //     Unilateral, weil sie nur auf sich selbst Bezug nimmt.
+    // 4.3 O(n), da es sich um eine lineare Rekursion handelt.
+    // 4.4 Actually: return 0, wegen Integer-Overflow?!?!
+
+    public static int f(int n){
+        System.out.println(n);
+        if (n == 0){
+            return n;
+        }
+        else
+            return (n % 2 == 0) ? (f(n * 2)) : (f((n -1)));
     }
 
 
