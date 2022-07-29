@@ -12,6 +12,7 @@ public class Main {
 
     public static void main(String[] args) {
         System.out.println("Reischer weg");
+
     }
 
     //region ADP WS2122 Altklausur https://elearning.uni-regensburg.de/pluginfile.php/2332747/mod_folder/content/0/ADP-WS2122.pdf?forcedownload=1
@@ -60,6 +61,18 @@ public class Main {
             j++;
         }
         return ints1;
+    }
+
+    //2.2 (ohne 2.1 als Hilfe)
+    public static int[] mul2(int[] ints, int n){
+        int index = 0;
+        int[] modified = new int[n * ints.length];
+        for (int i = 0; i < modified.length; i++){
+            if (index % ints.length == 0) index = 0;
+            modified[i] = ints[index];
+            index++;
+        }
+        return modified;
     }
 
    //4.1
@@ -125,6 +138,8 @@ public class Main {
         else
             return (n % 2 == 0) ? (f(n * 2)) : (f((n -1)));
     }
+
+
 
 
     //endregion
