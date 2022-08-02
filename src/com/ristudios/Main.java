@@ -1,8 +1,7 @@
 package com.ristudios;
 
 
-import com.ristudios.objectoriented.Interval;
-import com.ristudios.objectoriented.Rectangle;
+import com.ristudios.objectoriented.*;
 import com.ristudios.tree.TreeNode;
 
 import java.util.ArrayList;
@@ -10,9 +9,9 @@ import java.util.List;
 
 public class Main {
 
+
     public static void main(String[] args) {
         System.out.println("Reischer weg");
-
     }
 
     //region ADP WS2122 Altklausur https://elearning.uni-regensburg.de/pluginfile.php/2332747/mod_folder/content/0/ADP-WS2122.pdf?forcedownload=1
@@ -128,7 +127,7 @@ public class Main {
     //     Finalrekursion, da die Rekursion das letzte statement ist.
     //     Unilateral, weil sie nur auf sich selbst Bezug nimmt.
     // 4.3 O(n), da es sich um eine lineare Rekursion handelt.
-    // 4.4 Actually: return 0, wegen Integer-Overflow?!?!
+    // 4.4 return 0, wegen Integer-Overflow?!?!
 
     public static int f(int n){
         System.out.println(n);
@@ -144,6 +143,53 @@ public class Main {
 
     //endregion
 
+    //region SS16 Altklausur https://elearning.uni-regensburg.de/pluginfile.php/2332747/mod_folder/content/0/ADP-SS16.pdf?forcedownload=1
+
+    //1.1
+    //THEORY
+    // Von abstrakten Klassen kann kein Objekt erzeugt werden. Abstrakte Klassen werden daher meist als Superklasse
+    // für andere Klassen benutzt (Beispielsweise die abstrakte Klasse Mensch, welche die Superklasse von Mann und Frau ist)
+
+    //1.2
+    //THEORY
+    // Methoden können abstrakt sein, in diesem Fall werden diese nicht implementiert, sondern müssen von den erbenden
+    // Klassen überschrieben werden (ähnlich wie interface-Methoden). Variablen hingegen können nicht abstrakt sein.
+
+    //1.3
+    //THEORY
+    // Ja, es ist möglich Konstruktoren für abstrakte Klassen zu schreiben. Diese werden allerdings nur in den Konstruktoren
+    // der erbenden Klassen mit dem keyword super aufgerufen.
+
+    //1.4
+    /*
+    THEORY
+     Abstrakte Klassen können von anderen abstrakten Klassen erben. Nützlich wäre dies bei komplexeren Strukturen. Bsp.:
+     Die Klassen Mann und Frau erben von der abstrakten Klasse Mensch, welche wiederum von der abstrakten Klasse
+     Säugetier erbt.
+     */
+
+    //2
+
+    public static boolean compareMatrices(int[][] matrix, int[][] matrix2){
+        if (matrix == null || matrix2 == null) return false;
+        for (int i = 0; i < matrix.length; i++){
+            if (matrix[i].length != matrix2[i].length) return false;
+            for (int j = 0; j <matrix[i].length; j++){
+                if (matrix[i][j] != matrix2[i][j]) return false;
+            }
+        }
+        return true;
+    }
+
+    //3.1 Siehe package objectoriented
+
+    //3.2 CODE
+    public Bundy[] createBundies(){
+        return new Bundy[] {new MaleBundy("Al"), new MaleBundy("Bud"), new FemaleBundy("Peg"),
+        new FemaleBundy("Kelly")};
+    }
+
+    //endregion
 
     //region Übungsaufgaben von blatt https://elearning.uni-regensburg.de/mod/resource/view.php?id=2145558
 

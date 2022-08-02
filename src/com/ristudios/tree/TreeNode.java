@@ -13,6 +13,18 @@ public class TreeNode {
         this.nodeRight = right;
     }
 
+
+    //CODE Aufgabe 5 aus Altklausur SS16, unsicher ob richtig!!
+    public void swap(){
+        if (nodeLeft != null && nodeRight != null){
+            TreeNode temp = nodeLeft;
+            nodeLeft = nodeRight;
+            nodeRight = temp;
+        }
+    }
+
+
+
     public int count(){
         int factor = 0;
         if (cont > 0) factor++;
