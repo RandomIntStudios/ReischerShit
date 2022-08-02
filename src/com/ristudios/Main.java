@@ -10,6 +10,7 @@ import java.util.List;
 public class Main {
 
 
+
     public static void main(String[] args) {
         System.out.println("Reischer weg");
     }
@@ -18,12 +19,17 @@ public class Main {
 
     //Teilaufgaben liegen in den packages objectoriented und tree
 
+    //THEORY
+    // 1.1 Das Array enthält keine Elemente, da es ein Array der Länge 0 ist.
+    // 1.2 Das eine Array ist ein Array der Länge 0, das andere ein Array der Länge 1 mit 0 als erstem Wert.
+    // 1.3 Man erhält ein Array der Länge 0.
+    // 1.4 Man erhält ein Array der Länge 3, die Integer Werte sind dabei die entsprechenden Unicode Werte der chars
+
     //2.1
     public static int[] add(int[] a, int[] b){
         int[] c = new int[a.length+b.length];
 
         //double for approach
-
         //CODE
         // for (int i = 0; i < a.length; i++){
         //      c[i] = a[i];
@@ -33,7 +39,6 @@ public class Main {
         //  }
 
         //for plus if-else approach
-
         for (int i = 0; i < c.length; i++){
 
             //CODE
@@ -44,9 +49,7 @@ public class Main {
             //  }
 
             //for plus ?-operator approach
-
             int z = (i < a.length) ? (c[i] = a[i]) : (c[i] = b[i - a.length]);
-
         }
         return c;
     }
@@ -88,9 +91,12 @@ public class Main {
         return (n-1) + f1(0);
     }
 
+    //THEORY
+    // 4.2 Bilaterale Rekursion, Nicht Lineare Rekursion, Zentralrekursion
+    // 4.3 O(n), da der Teil F2 konstant ist
+
 
     //endregion
-
 
     //region SS21 Altklausur https://elearning.uni-regensburg.de/pluginfile.php/2332747/mod_folder/content/0/ADP-SS21.pdf?forcedownload=1
 
@@ -181,7 +187,7 @@ public class Main {
         return true;
     }
 
-    //3.1 Siehe package objectoriented
+    //3.1 Siehe com.ristudios.objectoriented.Bundy, .FemaleBundy und .MaleBundy
 
     //3.2 CODE
     public Bundy[] createBundies(){
