@@ -151,6 +151,43 @@ public class Main {
 
     //endregion
 
+    //region WS2021 Altklausur https://elearning.uni-regensburg.de/pluginfile.php/2332747/mod_folder/content/0/ADP-WS2021.pdf?forcedownload=1
+
+    //THEORY
+    // 1.1 Jedes Objekt von S ist automatisch auch T. Bei den Klassen Tier (T) und Katze (S) könnte man beispeilsweise
+    // sagen, dass jede Katze ein Tier ist, aber nicht jedes Tier eine Katze. Somit hat S auch Zugriff auf alle Methoden
+    // von T.
+    // 1.2 Diese Typumwandlung klappt genau dann, wenn man sicher weiß, dass die Instanz t auch S sein muss
+    // 1.3 Null ist mit jedem nicht primitiven Datentyp kompatibel,
+
+    //CODE (noch nicht getestet)
+
+    //2.1
+    public static int countValue(int[][][] field, int val){
+        int count = 0;
+        for (int[][] matrix : field){
+            for (int[] arr : matrix){
+                for (int i : arr){
+                    if (i == val) count++;
+                }
+            }
+        }
+        return count;
+    }
+
+    //2.2
+    public static int[][] addMatrices (int[][] mat1, int[][] mat2){
+        int[][] result = new int[mat1.length][mat1[0].length];
+        for (int i = 0; i < mat1.length; i++){
+            for (int j = 0; j < mat1[i].length; j++){
+                result[i][j] = mat1[i][j] + mat2[i][j];
+            }
+        }
+        return result;
+    }
+
+    //endregion
+
     //region SS16 Altklausur https://elearning.uni-regensburg.de/pluginfile.php/2332747/mod_folder/content/0/ADP-SS16.pdf?forcedownload=1
 
     //1.1
