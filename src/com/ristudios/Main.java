@@ -56,17 +56,19 @@ public class Main {
 
     //2.2
     public static int[] mul(int[] ints, int i){
+        if (i < 1) return null;
         int j = 1;
-        int[] ints1 = ints;
+        int[] modified = ints;
         while (j < i){
-            ints1 = add(ints1, ints);
+            modified = add(modified, ints);
             j++;
         }
-        return ints1;
+        return modified;
     }
 
     //2.2 (ohne 2.1 als Hilfe)
     public static int[] mul2(int[] ints, int n){
+        if (n < 1) return null;
         int index = 0;
         int[] modified = new int[n * ints.length];
         for (int i = 0; i < modified.length; i++){
